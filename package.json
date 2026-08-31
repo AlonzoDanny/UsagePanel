@@ -1,0 +1,24 @@
+{
+  "name": "usagepanel",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n frontend,backend -c cyan,green \"npm run dev --workspace=usagepanel-frontend\" \"npm run dev --workspace=usagepanel-api\"",
+    "dev:frontend": "npm run dev --workspace=usagepanel-frontend",
+    "dev:backend": "npm run dev --workspace=usagepanel-api",
+    "lint": "npm run lint --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "prisma:generate": "npm run prisma:generate --workspace=usagepanel-api",
+    "prisma:deploy": "npm run prisma:deploy --workspace=usagepanel-api",
+    "admin:create": "npm run admin:create --workspace=usagepanel-api"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

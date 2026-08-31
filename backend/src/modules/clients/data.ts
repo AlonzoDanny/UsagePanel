@@ -1,0 +1,134 @@
+export interface ClientRecord {
+  id: string
+  companyName: string
+  representativeName: string
+  plan: 'Starter' | 'Estándar' | 'Pro'
+  assignedMinutes: number
+  consumedMinutes: number
+  paymentDate: string
+  paymentStatus: 'paid' | 'pending' | 'overdue'
+  billingPeriodStart: string
+  billingPeriodEnd: string
+  lastUpdatedAt: string
+}
+
+// Temporary server-side fixture. Replace its provider with n8n when available.
+export const clients: ClientRecord[] = [
+  {
+    id: 'CLI-001',
+    companyName: 'Vital Med, S.A.',
+    representativeName: 'Andrea López',
+    plan: 'Pro',
+    assignedMinutes: 1000,
+    consumedMinutes: 742,
+    paymentDate: '2026-09-12',
+    paymentStatus: 'paid',
+    billingPeriodStart: '2026-08-12',
+    billingPeriodEnd: '2026-09-11',
+    lastUpdatedAt: '2026-08-31T11:29:00-06:00',
+  },
+  {
+    id: 'CLI-002',
+    companyName: 'Grupo Altura',
+    representativeName: 'Carlos Ramírez',
+    plan: 'Estándar',
+    assignedMinutes: 600,
+    consumedMinutes: 498,
+    paymentDate: '2026-09-05',
+    paymentStatus: 'paid',
+    billingPeriodStart: '2026-08-05',
+    billingPeriodEnd: '2026-09-04',
+    lastUpdatedAt: '2026-08-31T10:14:00-06:00',
+  },
+  {
+    id: 'CLI-003',
+    companyName: 'Norte Legal',
+    representativeName: 'Mariana Torres',
+    plan: 'Pro',
+    assignedMinutes: 1500,
+    consumedMinutes: 1492,
+    paymentDate: '2026-08-28',
+    paymentStatus: 'pending',
+    billingPeriodStart: '2026-07-28',
+    billingPeriodEnd: '2026-08-27',
+    lastUpdatedAt: '2026-08-31T09:42:00-06:00',
+  },
+  {
+    id: 'CLI-004',
+    companyName: 'Constructora Marea',
+    representativeName: 'Diego Herrera',
+    plan: 'Estándar',
+    assignedMinutes: 800,
+    consumedMinutes: 944,
+    paymentDate: '2026-08-18',
+    paymentStatus: 'overdue',
+    billingPeriodStart: '2026-07-18',
+    billingPeriodEnd: '2026-08-17',
+    lastUpdatedAt: '2026-08-31T11:02:00-06:00',
+  },
+  {
+    id: 'CLI-005',
+    companyName: 'Clínica Horizonte',
+    representativeName: 'Valeria Soto',
+    plan: 'Starter',
+    assignedMinutes: 300,
+    consumedMinutes: 87,
+    paymentDate: '2026-09-15',
+    paymentStatus: 'paid',
+    billingPeriodStart: '2026-08-15',
+    billingPeriodEnd: '2026-09-14',
+    lastUpdatedAt: '2026-08-31T08:35:00-06:00',
+  },
+  {
+    id: 'CLI-006',
+    companyName: 'Logística Central',
+    representativeName: 'Jorge Mendoza',
+    plan: 'Pro',
+    assignedMinutes: 2000,
+    consumedMinutes: 1610,
+    paymentDate: '2026-09-01',
+    paymentStatus: 'pending',
+    billingPeriodStart: '2026-08-01',
+    billingPeriodEnd: '2026-08-31',
+    lastUpdatedAt: '2026-08-31T11:18:00-06:00',
+  },
+  {
+    id: 'CLI-007',
+    companyName: 'Estudio Ámbar',
+    representativeName: 'Sofía Cabrera',
+    plan: 'Starter',
+    assignedMinutes: 250,
+    consumedMinutes: 200,
+    paymentDate: '2026-08-24',
+    paymentStatus: 'overdue',
+    billingPeriodStart: '2026-07-24',
+    billingPeriodEnd: '2026-08-23',
+    lastUpdatedAt: '2026-08-31T10:51:00-06:00',
+  },
+  {
+    id: 'CLI-008',
+    companyName: 'TecnoSur',
+    representativeName: 'Ricardo Vega',
+    plan: 'Estándar',
+    assignedMinutes: 750,
+    consumedMinutes: 519,
+    paymentDate: '2026-09-09',
+    paymentStatus: 'paid',
+    billingPeriodStart: '2026-08-09',
+    billingPeriodEnd: '2026-09-08',
+    lastUpdatedAt: '2026-08-31T09:57:00-06:00',
+  },
+  {
+    id: 'CLI-009',
+    companyName: 'Alimentos del Valle',
+    representativeName: 'Paula Jiménez',
+    plan: 'Pro',
+    assignedMinutes: 1200,
+    consumedMinutes: 1218,
+    paymentDate: '2026-08-20',
+    paymentStatus: 'overdue',
+    billingPeriodStart: '2026-07-20',
+    billingPeriodEnd: '2026-08-19',
+    lastUpdatedAt: '2026-08-31T11:26:00-06:00',
+  },
+]

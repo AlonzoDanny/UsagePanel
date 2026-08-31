@@ -1,0 +1,2 @@
+export const WARNING_USAGE_PERCENTAGE = 80
+export const LIMIT_USAGE_PERCENTAGE = 100
