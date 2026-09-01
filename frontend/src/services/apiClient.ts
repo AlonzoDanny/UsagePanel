@@ -15,7 +15,8 @@ export async function apiRequest<T>(
     throw new Error('La URL del backend no está configurada.')
   const method = options.method?.toUpperCase() ?? 'GET'
   const headers = new Headers(options.headers)
-  headers.set('Content-Type', 'application/json')
+  if (options.body !== undefined && !headers.has('Content-Type'))
+    headers.set('Content-Type', 'application/json')
   if (!['GET', 'HEAD'].includes(method)) {
     const csrfToken = getCsrfToken()
     if (csrfToken) headers.set('X-CSRF-Token', decodeURIComponent(csrfToken))
